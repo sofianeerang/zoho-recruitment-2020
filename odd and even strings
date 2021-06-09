@@ -1,0 +1,45 @@
+#include<conio.h>
+#include<string.h>
+#include<iostream.h>
+int main()
+{
+char str[15],str1[10];
+int m,n,len,mid,k,len1;
+clrscr();
+cout<<"INPUT :";
+cin>>str;
+cout<<endl;
+cout<<"OUTPUT:"<<endl;
+len=strlen(str);
+len1=len;
+if(len%2 == 0)
+len=len+1;
+mid=len/2;
+k=mid;
+for(m=0;m<=mid;m++)
+{
+str1[m]=str[k];
+k++;
+}
+k=0;
+if(len1%2==0)
+{
+mid=mid-1;
+len=len-1;
+}
+for(n=mid+1;n<len;n++)
+{
+str1[n]=str[k];
+k++;
+}
+for(m=0;m<len1;m++)
+{
+for(n=0;n<=m;n++)
+{
+cout<<str1[n];
+}
+cout<<endl;
+}
+getch();
+return 0;
+}
